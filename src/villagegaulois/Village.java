@@ -19,7 +19,6 @@ public class Village {
 	private static class Marche {
 		private Etal[] etals;
 
-		// methods
 		private Marche(int nbEtals) {
 			this.etals = new Etal[nbEtals];
 			for (int i = 0; i < nbEtals; i++) {
@@ -31,7 +30,7 @@ public class Village {
 			etals[indiceEtal].occuperEtal(vendeur, produit, nbProduit);
 		}
 
-		private int trouverEtalLibre() {
+		public int trouverEtalLibre() {
 			for (int i = 0; i < etals.length; i++)
 				if (!etals[i].isEtalOccupe())
 					return i;
@@ -124,6 +123,12 @@ public class Village {
 		return chaine.toString();
 	}
 	
+	public String installerVendeur(Gaulois vendeur, String produit, int nbProduit) {
+		StringBuilder chaine = new StringBuilder();
+		Etal etalLibre = null;
+		etalLibre.equals(marche.trouverEtalLibre());
+		
+	}
 
 	}
 
